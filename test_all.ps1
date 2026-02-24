@@ -38,8 +38,8 @@ Write-Info "Clé générée par la lib cryptography.fernet"
 Write-Data "Valeur de la clé : $key"
 
 Write-Step "Injection de la clé dans les variables d'environnement"
-$env:GITHUB_SECRET_FERNET_KEY = $key
-Write-Info "Secret GitHub : `$env:GITHUB_SECRET_FERNET_KEY configuré."
+$env:SECRET_FERNET_KEY = $key
+Write-Info "Secret GitHub : `$env:SECRET_FERNET_KEY configuré."
 
 Write-Step "Chiffrement du fichier secret.txt -> secret_atelier1.enc"
 Write-Info "Appel de : python3 app/fernet_atelier1.py encrypt secret.txt secret_atelier1.enc"

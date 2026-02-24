@@ -12,9 +12,9 @@ def main():
     output_file = sys.argv[3]
 
     # La clé est stockée dans une variable d'environnement (Secret GitHub)
-    key = os.environ.get("GITHUB_SECRET_FERNET_KEY")
+    key = os.environ.get("SECRET_FERNET_KEY")
     if not key:
-        print("❌ GITHUB_SECRET_FERNET_KEY n'est pas défini dans les variables d'environnement.")
+        print("❌ SECRET_FERNET_KEY n'est pas défini dans les variables d'environnement.")
         sys.exit(1)
 
     f = Fernet(key.encode('utf-8'))
